@@ -1,0 +1,35 @@
+<html>
+<head>
+		<link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Dosis:500,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="webcam.min.js"></script>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="kairos.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>A mysterious organization</title>
+</head>
+<body>
+	<p>Put a name to your face</p>
+	<p>This is the last name you'll be known for</p>
+	<form method="POST" action="#" >
+				<input type="text" name="username" placeholder="Your Name" id="username"><br>
+				<p>Oh, and we'll need some pics of you. Press Whiskey when you're ready.</p>
+				<div id="mycam_video"></div>
+
+				<script type="text/javascript">
+				Webcam.set({
+				 width: 320,
+				 height: 240,
+				 image_format: 'jpeg',
+				 jpeg_quality: 100
+				});
+				Webcam.attach( '#mycam_video' );
+				</script>
+
+				<div id="results"></div>
+				<button name="Whiskey" id="Whiskey" type="button" onClick="takePics()">Whiskey</button><br>
+				<button name="OK" id="ok" type="button" onClick="window.location.href='index.html'">OK</button>
+			</form>
+</body>
+</html>

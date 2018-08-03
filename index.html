@@ -1,0 +1,32 @@
+<html>
+<head>
+		<link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Dosis:500,700' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="webcam.min.js"></script>
+		<script type="text/javascript" src="kairos.js" ></script>
+  	<script type="text/javascript" src="code.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>A mysterious organization</title>
+</head>
+<body>
+	<form method="POST" action="#" id="everything">
+				<img src="logo.png" id="logo" width="10%" align="center">
+				<div id="my_camera"></div>
+				<script type="text/javascript">
+				Webcam.set({
+				 width: 320,
+				 height: 240,
+				 image_format: 'jpeg',
+				 jpeg_quality: 100
+				});
+				Webcam.attach( '#my_camera' );
+				</script>
+				<button name="LOGIN" id="login" type="button" onClick="login_attempt()">Log In</button>
+				<button name="SIGNUP" id="signup" type="button" onclick="window.location.href='signup.html'">Sign Up</button>
+			</form>
+			<div id="Loginsucess">
+				<p id="voice"> Try your luck </p>
+			</div>
+</body>
+</html>
